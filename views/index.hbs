@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="image_search"><input type="button" id="images" value = "draw cards"><br>
+<input type="text" id="nasus_images"><input type="button" id="nasus" value = "fetch nasa images">
+</form>
+<script>
+    document.getElementById("images").onclick = function () {
+        location.href = "/cards/" +  document.getElementById("image_search").value;
+    }
+    document.getElementById("nasus").onclick = function () {
+        location.href = "/nasa/" +  document.getElementById("nasus_images").value;
+    }
+</script>
+</body>
+</html>

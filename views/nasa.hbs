@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body id="body">
+<input type="text" id="tb" value="hello">
+<input type="button" id="refresh" value = "refresh images with new search of nasa"><br>
+{{#each replace as |item|}}
+  <img src={{item}} width = "200" height = "200">
+{{/each}}
+<script>
+    document.getElementById("refresh").onclick = function () {
+        location.href = "/nasa/" + document.getElementById("tb").value;
+    };
+</script>
+</body>
+</html>

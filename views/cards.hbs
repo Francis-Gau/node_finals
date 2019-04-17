@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body id="body">
+<input type="text" id="tb" value="5">
+<input type="button" id="refresh" value = "Refresh page with number of cards"><br>
+{{#each replace as |item|}}
+  <img src={{item}}>
+{{/each}}
+<script>
+    document.getElementById("refresh").onclick = function () {
+        location.href = "/cards/" + document.getElementById("tb").value;
+    };
+</script>
+</body>
+</html>
