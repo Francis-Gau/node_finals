@@ -9,10 +9,10 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', (request, response) => {
+app.get('/glacial-bayou-89728', (request, response) => {
     response.render('index.hbs');
 })
-app.get('/cards/:num_cards', (request, response) => {
+app.get('/glacial-bayou-89728/cards/:num_cards', (request, response) => {
     cards.card_draw(request.params.num_cards).then((resolved) => {
         var cards = {}
         for(var x = 0; x < request.params.num_cards; x++){
@@ -27,7 +27,7 @@ app.get('/cards/:num_cards', (request, response) => {
     });
 })
 
-app.get('/nasa/:search', (request, response) => {
+app.get('/glacial-bayou-89728/nasa/:search', (request, response) => {
     nasa.image_api(request.params.search).then((resolved) => {
         var images = {}
         var lengthy = resolved.length
