@@ -48,6 +48,9 @@ app.get('/glacial-bayou-89728/nasa/:search', (request, response) => {
     });
 })
 
-app.listen(8080, () => {
-    console.log('Server is up on the port 8080');
+
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+    console.log('Server is up');
 });
