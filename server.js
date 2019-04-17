@@ -9,7 +9,7 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
 
-app.get('', (request, response) => {
+app.get('/', (request, response) => {
     response.render('index.hbs');
 })
 app.get('/cards/:num_cards', (request, response) => {
