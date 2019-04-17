@@ -48,6 +48,11 @@ app.get('/nasa/:search', (request, response) => {
     });
 })
 
+app.get('/404', (request, response) => {
+    response.send({
+        error: 'Page not found'
+    })
+})
 
 const port = process.env.PORT || 8000;
 
